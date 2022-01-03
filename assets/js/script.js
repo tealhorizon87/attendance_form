@@ -10,7 +10,6 @@ function sendMail(contactForm) {
     "guest2_dining": contactForm.guest_2_dining.value,
     "guest2_diet": contactForm.guest_2_diet.value
   });
-  console.log("success");
   .then(
     function(response) {
       alert("Your feedback has been sent");
