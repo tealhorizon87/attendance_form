@@ -24,12 +24,10 @@ This is a page designed for a social group that want to know how many of their m
     - be notified if I have not filled the form in correctly
     - be notified that the form was submitted successfully
   - As the site administrator, I want to:
-    - have a secure access to the admin page
-    - have the data collected display in an easy-to-read way
-    - have the ability to clear the data
-    - be warned before that data is cleared
+    - be emailed with all the relevant details contained in the submitted form
 
 ### Design
+This page is a simple form, made using [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/), and then submitted via [emailJS](https://www.emailjs.com/). Once the form is submitted, the user is directed to a 'thank you' page so that they are notified that the form is submitted.
 
 ### Wireframes
 Below is the wireframe used to help design the page layout
@@ -55,6 +53,8 @@ Back to [Table of Contents](#table-of-contents)
 ### Libraries and Frameworks:
   - [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
     - The main CSS library used to style the pages and make it responsive
+  - [emailJS](https://www.emailjs.com/)
+    - an API used to format an email containing values from a form
 
 ### Tools:
   - [Atom](https://atom.io/) with [GitHub Desktop](https://desktop.github.com/)
@@ -96,5 +96,6 @@ Back to [Table of Contents](#table-of-contents)
 
 ### Acknowledgements
   - The logo picture was sourced from Aviation & Combined Services Lodge No. 8504.
+  - The background images were sourced from [pixabay](https://pixabay.com/)
 
 Back to [Table of Contents](#table-of-contents)
