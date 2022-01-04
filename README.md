@@ -71,6 +71,31 @@ Back to [Table of Contents](#table-of-contents)
 ## Testing
 As this is a relatively simple page, the testing carried out is also relatively basic.
 
+### Code Validation
+Both HTML files and CSS file were run through code validators and minor fixes were carried out to result in no findings.
+
+### Chrome Lighthouse reports
+Below are the lighthouse reports for -
+#### Home page
+![lighthouse report for home page](assets/img/lighthouse_index.png)
+#### Thanks page
+![lighthouse report for thanks page](assets/img/lighthouse_thanks.png)
+
+### User Story Evaluation
+  - As a user, I want to:
+    - have a clear picture of what the page is for
+      - __A large logo and title are at the top of the page, along with a description of what to do in the main section__
+    - easily understand what information is required by the form
+      - __Each input field has placeholder text to describe what information is required__
+    - be notified if I have not filled the form in correctly
+      - __There is an error message if the form fails to submit, and any required fields will have browser generated messages if they are not completed properly__
+    - be notified that the form was submitted successfully
+      - __Once the form has been submitted, the user is directed to the 'thanks' page, and informed that the form has been submitted__
+  - As the site administrator, I want to:
+    - be emailed with all the relevant details contained in the submitted form
+      - __A custom email template is filled in when the form is submitted and emailed to the required email address__
+
+Back to [Table of Contents](#table-of-contents)
 
 ## Deployment
 ### Forking the Repository
