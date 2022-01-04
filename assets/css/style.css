@@ -63,6 +63,10 @@ footer .row {
   margin-bottom: 0;
 }
 
+form button {
+  background-color: #75a2fd;
+}
+
 /* ----------------------------------------- Form Styles */
 .thanks-card {
   margin-top: 5rem;
