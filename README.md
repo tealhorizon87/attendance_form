@@ -69,6 +69,8 @@ Back to [Table of Contents](#table-of-contents)
 Back to [Table of Contents](#table-of-contents)
 
 ## Testing
+As this is a relatively simple page, the testing carried out is also relatively basic.
+
 
 ## Deployment
 ### Forking the Repository
