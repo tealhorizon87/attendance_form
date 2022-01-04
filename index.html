@@ -34,8 +34,8 @@
             <div class="row">
               <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
                 <div class="row card m-3">
-                  <div class="col card-body text-center py-5">
-                    <h2>Our Next Meeting</h2>
+                  <div class="col card-body text-center mt-5">
+                    <h2 class="mb-5 h1"><strong>Our Next Meeting</strong></h2>
                     <p>
                       Please fill in this form to let our secretary know that you are attending
                       the next meeting, and if you are bringing a guest.
@@ -43,19 +43,19 @@
                   </div>
                   <div class="row">
                     <div class="col">
-                      <form onsubmit="return sendMail(this)" class="row mt-5 attendance-form">
+                      <form onsubmit="return sendMail(this);" class="row mt-5 attendance-form" id="attendanceForm">
                         <div class="col-10 offset-1 form-group">
                           <input type="text" class="form-control my-auto" name="name" placeholder="Name">
                         </div>
                         <div class="col-12 text-center my-3">
                           <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="dining" id="diningRadio" value="True" checked>
+                            <input class="form-check-input" type="radio" name="dining" id="diningRadio" value="dining" checked>
                             <label class="form-check-label" for="diningRadio">
                               Dining
                             </label>
                           </div>
                           <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" name="dining" id="diningRadio" value="False">
+                            <input class="form-check-input" type="radio" name="dining" id="diningRadio" value="not dining">
                             <label class="form-check-label" for="diningRadio">
                               Not Dining
                             </label>
@@ -80,17 +80,17 @@
                             <h4 class="h6">Guest 1:</h4>
                             <div class="form-inline">
                               <div class="form-group">
-                                <input type="text" class="form-control" name="guest_1_name" placeholder="Name">
+                                <input type="text" class="form-control" name="guest_1_name" placeholder="Rank & Name">
                               </div>
                               <div class="text-center m-3">
                                 <div class="form-check-inline">
-                                  <input class="form-check-input" type="radio" name="guest_1_dining" id="guest1DiningRadio" value="True" checked>
+                                  <input class="form-check-input" type="radio" name="guest_1_dining" id="guest1DiningRadio" value="dining" checked>
                                   <label class="form-check-label" for="guest1DiningRadio">
                                     Dining
                                   </label>
                                 </div>
                                 <div class="form-check-inline">
-                                  <input class="form-check-input" type="radio" name="guest_1_dining" id="guest1DiningRadio" value="False">
+                                  <input class="form-check-input" type="radio" name="guest_1_dining" id="guest1DiningRadio" value="not dining">
                                   <label class="form-check-label" for="guest1DiningRadio">
                                     Not Dining
                                   </label>
@@ -115,17 +115,17 @@
                             <h4 class="h6 mt-3">Guest 2:</h4>
                             <div class="form-inline">
                               <div class="form-group">
-                                <input type="text" class="form-control" name="guest_2_name" placeholder="Name">
+                                <input type="text" class="form-control" name="guest_2_name" placeholder="Rank & Name">
                               </div>
                               <div class="text-center m-3">
                                 <div class="form-check-inline">
-                                  <input class="form-check-input" type="radio" name="guest_2_dining" id="guest2DiningRadio" value="True" checked>
+                                  <input class="form-check-input" type="radio" name="guest_2_dining" id="guest2DiningRadio" value="dining" checked>
                                   <label class="form-check-label" for="guest2DiningRadio">
                                     Dining
                                   </label>
                                 </div>
                                 <div class="form-check-inline">
-                                  <input class="form-check-input" type="radio" name="guest_2_dining" id="guest2DiningRadio" value="False">
+                                  <input class="form-check-input" type="radio" name="guest_2_dining" id="guest2DiningRadio" value="not dining">
                                   <label class="form-check-label" for="guest2DiningRadio">
                                     Not Dining
                                   </label>
@@ -160,15 +160,15 @@
         <footer class="container-fluid">
             <div class="row text-center">
               <div class="col-12 col-sm-4 my-3 my-sm-auto">
-                <a href="#" class="h5 admin-link" id="adminModalButton" data-toggle="modal" data-target="#adminModal">Admin</a>
+                <a href="https://aviationlodge8504.org.uk/" target="_blank" class="h5 admin-link">aviationlodge8504.org.uk</a>
               </div>
               <div class="col-12 col-sm-4 my-3 my-sm-auto">
-                <p class="mb-0">Lodge No.8504</p>
+                <p class="mb-0">Meeting Attendance Form</p>
               </div>
               <div class="col-12 col-sm-4 my-3 my-sm-auto">
                 <ul class="list-inline h5">
                   <li class="list-inline-item">
-                    <a href="#" class="h5 link">
+                    <a href="https://www.facebook.com/groups/418457545161817" target="_blank" class="h5 link">
                       <i class="fab fa-facebook-square"></i>
                     </a>
                   </li>
@@ -179,6 +179,12 @@
         </div>
       </div>
 
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script type="text/javascript">
+        (function(){
+          emailjs.init("user_IW6Pwsm8AWLFCD87hj6JH");
+        })();
+      </script>
       <script src="https://kit.fontawesome.com/b0451faeb3.js" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>

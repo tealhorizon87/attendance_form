@@ -15,8 +15,7 @@
 body {
   background: url("./../img/hero1.jpg") no-repeat fixed;
   background-size: cover;
-  background-position: 0px 120px;
-  height: calc(100vh - 152px);
+  background-position: 0px 0px;
 }
 
 /* --------------------------------------- Header Styles */
@@ -62,6 +61,11 @@ footer .row {
 
 .form-group {
   margin-bottom: 0;
+}
+
+/* ----------------------------------------- Form Styles */
+.thanks-card {
+  margin-top: 5rem;
 }
 
 /* --------------------------------------- Media Queries */

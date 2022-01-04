@@ -1,19 +1,23 @@
 function sendMail(contactForm) {
-  emailjs.send("service_2p76xzg", "attendace_form", {
-    "from_name": contactForm.name.value,
+
+  var formData = {
+    "name": contactForm.name.value,
     "dining": contactForm.dining.value,
     "diet": contactForm.diet.value,
-    "guest1": contactForm.guest_1_name.value,
-    "guest1_dining": contactForm.guest_1_dining.value,
-    "guest1_diet": contactForm.guest_1_diet.value,
-    "guest2": contactForm.guest_2_name.value,
-    "guest2_dining": contactForm.guest_2_dining.value,
-    "guest2_diet": contactForm.guest_2_diet.value
-  });
+  };
+
+  if (contactForm.guest_1_name.value) {
+    formData["guest1"] = `${contactForm.guest_1_name.value} is ${contactForm.guest_1_dining.value}. Their dietary requirements are - ${contactForm.guest_1_diet.value}.`;
+  };
+
+  if (contactForm.guest_2_name.value) {
+    formData["guest2"] = `${contactForm.guest_2_name.value} is ${contactForm.guest_2_dining.value}. Their dietary requirements are - ${contactForm.guest_2_diet.value}.`;
+  };
+
+  emailjs.send("service_2p76xzg", "attendace_form", formData)
   .then(
     function(response) {
-      alert("Your feedback has been sent");
-      clearForm();
+      window.location.href = "thanks.html"
       return response;
     },
     function(error) {
@@ -21,9 +25,4 @@ function sendMail(contactForm) {
       return error;
     });
   return false;
-}
-
-function clearForm() {
-  document.getElementsByTagName("input").value = '';
-  document.getElementsByTagName("select").value = '';
 }
