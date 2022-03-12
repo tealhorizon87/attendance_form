@@ -50,9 +50,12 @@
                   </div>
                   <div class="row">
                     <div class="col">
-                      <form onsubmit="return sendMail(this);" class="row mt-5 attendance-form" id="attendanceForm">
+                      <form onsubmit="return sendMail(this);" class="row mt-3 attendance-form" id="attendanceForm">
                         <div class="col-10 offset-1 form-group">
                           <input type="text" class="form-control my-auto" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="col-10 offset-1 form-group mt-3">
+                          <input type="email" class="form-control my-auto" name="email" placeholder="Email">
                         </div>
                         <div class="col-12 text-center my-3">
                           <div class="form-check-inline">
@@ -83,7 +86,10 @@
                             style="display: none;" id="otherDiet" name="other-diet" placeholder="Please specify...">
                         </div>
                         <div class="col-10 offset-1">
-                          <h3 class="my-5">Guests</h3>
+                          <h3 class="mt-5">Guests</h3>
+                          <p class="font-weight-bold text-center">
+                            Please make sure you include your guest's rank with their name
+                          </p>
                         </div>
                         <div class="col-10 offset-1 d-flex justify-content-center">
                           <div>
