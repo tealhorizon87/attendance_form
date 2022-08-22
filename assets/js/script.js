@@ -76,7 +76,7 @@ function sendMail(contactForm) {
       }
   };
 
-  emailjs.send("service_2p76xzg", "attendace_form", formData)
+  emailjs.send("service_2p76xzg", "template_wrmtcix", formData)
   .then(
     function(response) {
       window.location.href = "thanks.html"
