@@ -35,7 +35,7 @@ function sendMail(contactForm) {
       Their dietary requirements are - Other: ${otherDiet.value}.`;
   } else if (contactForm.dining.value == "dining") {
     formData["member"] = `${contactForm.name.value} will be attending. They will be ${contactForm.dining.value}.
-      Their dietary requirements are - ${contactForm.guest_1_diet.value}.`;
+      Their dietary requirements are - ${contactForm.diet.value}.`;
   } else {
     formData["member"] = `${contactForm.name.value} will be attending. They will be ${contactForm.dining.value}.`;
   }
