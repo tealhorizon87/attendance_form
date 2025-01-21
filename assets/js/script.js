@@ -24,7 +24,7 @@ function dietSelector(that) {
 }
 
 
-function sendMail(contactForm) {
+function attendingForm(contactForm) {
   var formData = {
     "name": contactForm.name.value,
     "email": contactForm.email.value,
