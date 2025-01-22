@@ -3,6 +3,22 @@ const otherDiet1 = document.getElementById("otherDiet1");
 const otherDiet2 = document.getElementById("otherDiet2");
 const otherDiet3 = document.getElementById("otherDiet3");
 
+function attending() {
+  if (!document.getElementById("notAttending").classList.contains("d-none")) {
+    document.getElementById("notAttending").classList.add("d-none");
+  };
+
+  document.getElementById("attending").classList.remove("d-none");
+}
+
+function notAttending() {
+  if (!document.getElementById("attending").classList.contains("d-none")) {
+    document.getElementById("attending").classList.add("d-none");
+  };
+
+  document.getElementById("notAttending").classList.remove("d-none");
+}
+
 function dietSelector(that) {
   if (that.name == "diet") {
     if (that.value == "other") {
@@ -22,7 +38,6 @@ function dietSelector(that) {
     }
   }
 }
-
 
 function attendingForm(contactForm) {
   var formData = {
@@ -102,10 +117,8 @@ function notAttendingForm(contactForm) {
     "name": contactForm.name.value,
     "email": contactForm.email.value,
     "comments": contactForm.comments.value,
-  };
-
-  if (contactForm.name.value == true) {
-    formData["member"] = '${contactForm.name.value} will not be attending.';
+    "member": `${contactForm.name.value} will not be attending.`,
+    "guest1": 'N/A',
   };
 
   emailjs.send("service_2p76xzg", "template_efei8f6", formData)

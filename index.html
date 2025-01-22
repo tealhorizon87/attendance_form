@@ -53,13 +53,13 @@
             <section class="col mb-5">
               <h3 class="text-center">Will you be attending?</h3>
               <div class="text-center">
-                <button class="btn btn-success py-3 px-5 mr-2">Yes</button>
-                <button class="btn btn-danger py-3 px-5 ml-2">No</button>
+                <button class="btn btn-success py-3 px-5 mr-2" onclick="attending()">Yes</button>
+                <button class="btn btn-danger py-3 px-5 ml-2" onclick="notAttending()">No</button>
               </div>
             </section>
 
             <!-- Attending form section -->
-            <section class="col">
+            <section class="col d-none" id="attending">
               <form onsubmit="return attendingForm(this);" class="row mt-3 attendance-form" id="attendanceForm">
                 <div class="col-10 offset-1 form-group">
                   <input type="text" class="form-control my-auto" name="name" placeholder="Name & Rank" required>
@@ -230,7 +230,7 @@
             </section>
 
             <!-- Not attending form section -->
-            <section class="col">
+            <section class="col d-none" id="notAttending">
               <form onsubmit="return notAttendingForm(this);" class="row mt-3 attendance-form" id="noAttendanceForm">
                 <div class="col-10 offset-1 form-group">
                   <input type="text" class="form-control my-auto" name="name" placeholder="Name & Rank" required>
