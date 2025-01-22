@@ -26,6 +26,7 @@
     </header>
 
     <main class="container-fluid">
+      <!-- header spacer to move content below it -->
       <div class="header-spacer"></div>
 
       <div class="row">
@@ -52,13 +53,13 @@
             <section class="col mb-5">
               <h3 class="text-center">Will you be attending?</h3>
               <div class="text-center">
-                <button class="btn btn-success p-3 mr-2">Yes</button>
-                <button class="btn btn-danger p-3 ml-2">No</button>
+                <button class="btn btn-success py-3 px-5 mr-2">Yes</button>
+                <button class="btn btn-danger py-3 px-5 ml-2">No</button>
               </div>
             </section>
 
             <!-- Attending form section -->
-            <section class="col d-none">
+            <section class="col">
               <form onsubmit="return attendingForm(this);" class="row mt-3 attendance-form" id="attendanceForm">
                 <div class="col-10 offset-1 form-group">
                   <input type="text" class="form-control my-auto" name="name" placeholder="Name & Rank" required>
@@ -66,13 +67,7 @@
                 <div class="col-10 offset-1 form-group mt-3">
                   <input type="email" class="form-control my-auto" name="email" placeholder="Email">
                 </div>
-                <div class="col-12 text-center my-3">
-                  <div class="form-check-inline">
-                    <input class="form-check-input" type="radio" name="dining" id="notAttendingRadio" value="not attending">
-                    <label class="form-check-label" for="notAttendingRadio">
-                      Not Attending
-                    </label>
-                  </div>
+                <div class="col-12 text-center my-3">                  
                   <div class="form-check-inline">
                     <input class="form-check-input" type="radio" name="dining" id="diningRadio" value="dining" checked>
                     <label class="form-check-label" for="diningRadio">
@@ -235,7 +230,7 @@
             </section>
 
             <!-- Not attending form section -->
-            <section class="col mb-sm-5">
+            <section class="col">
               <form onsubmit="return notAttendingForm(this);" class="row mt-3 attendance-form" id="noAttendanceForm">
                 <div class="col-10 offset-1 form-group">
                   <input type="text" class="form-control my-auto" name="name" placeholder="Name & Rank" required>

@@ -88,7 +88,39 @@ function attendingForm(contactForm) {
     });
 
   emailjs.send("service_2p76xzg", "template_qadn8oc", formData)
-    .then(function(response) {
+  .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+
+  return false;
+}
+
+function notAttendingForm(contactForm) {
+  var formData = {
+    "name": contactForm.name.value,
+    "email": contactForm.email.value,
+    "comments": contactForm.comments.value,
+  };
+
+  if (contactForm.name.value == true) {
+    formData["member"] = '${contactForm.name.value} will not be attending.';
+  };
+
+  emailjs.send("service_2p76xzg", "template_efei8f6", formData)
+  .then(
+    function(response) {
+      window.location.href = "thanks.html"
+      return response;
+    },
+    function(error) {
+      alert("I'm sorry, something went wrong! Please try again");
+      return error;
+    });
+
+  emailjs.send("service_2p76xzg", "template_qadn8oc", formData)
+  .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
     }, function(error) {
        console.log('FAILED...', error);
