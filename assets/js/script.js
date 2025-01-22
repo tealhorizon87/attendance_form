@@ -3,6 +3,22 @@ const otherDiet1 = document.getElementById("otherDiet1");
 const otherDiet2 = document.getElementById("otherDiet2");
 const otherDiet3 = document.getElementById("otherDiet3");
 
+function attending() {
+  if (!document.getElementById("notAttending").classList.contains("d-none")) {
+    document.getElementById("notAttending").classList.add("d-none");
+  };
+
+  document.getElementById("attending").classList.remove("d-none");
+}
+
+function notAttending() {
+  if (!document.getElementById("attending").classList.contains("d-none")) {
+    document.getElementById("attending").classList.add("d-none");
+  };
+
+  document.getElementById("notAttending").classList.remove("d-none");
+}
+
 function dietSelector(that) {
   if (that.name == "diet") {
     if (that.value == "other") {
@@ -23,8 +39,7 @@ function dietSelector(that) {
   }
 }
 
-
-function sendMail(contactForm) {
+function attendingForm(contactForm) {
   var formData = {
     "name": contactForm.name.value,
     "email": contactForm.email.value,
@@ -88,7 +103,37 @@ function sendMail(contactForm) {
     });
 
   emailjs.send("service_2p76xzg", "template_qadn8oc", formData)
-    .then(function(response) {
+  .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+
+  return false;
+}
+
+function notAttendingForm(contactForm) {
+  var formData = {
+    "name": contactForm.name.value,
+    "email": contactForm.email.value,
+    "comments": contactForm.comments.value,
+    "member": `${contactForm.name.value} will not be attending.`,
+    "guest1": 'N/A',
+  };
+
+  emailjs.send("service_2p76xzg", "template_efei8f6", formData)
+  .then(
+    function(response) {
+      window.location.href = "thanks.html"
+      return response;
+    },
+    function(error) {
+      alert("I'm sorry, something went wrong! Please try again");
+      return error;
+    });
+
+  emailjs.send("service_2p76xzg", "template_qadn8oc", formData)
+  .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
     }, function(error) {
        console.log('FAILED...', error);

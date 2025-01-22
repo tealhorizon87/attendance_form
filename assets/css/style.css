@@ -1,21 +1,15 @@
 /* -------------------------------------- General Styles */
 .header-spacer {
-  height: 150px;
-}
-
-.page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-.main-content {
-  padding-bottom: 6rem;
+  padding-top: 8rem;
 }
 
 body {
   background: url("./../img/hero3.jpg") no-repeat fixed;
   background-size: cover;
   background-position: 0px 0px;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 6rem;
 }
 
 /* --------------------------------------- Header Styles */
@@ -67,9 +61,21 @@ form button {
   background-color: #75a2fd;
 }
 
-/* ----------------------------------------- Form Styles */
+/* ---------------------------------- Thanks page Styles */
 .thanks-card {
   margin-top: 5rem;
+}
+
+.display1 {
+  font-size: 6rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display4 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
 /* --------------------------------------- Media Queries */
@@ -78,11 +84,19 @@ form button {
     font-size: 1.5rem;
   }
 
-  .main-content {
+  body {
     padding-bottom: 13rem;
   }
 
   .header-spacer {
     height: 185px;
+  }
+
+  .display1 {
+    font-size: 2rem;
+  }
+
+  .display4 {
+    font-size: 1rem;
   }
 }
