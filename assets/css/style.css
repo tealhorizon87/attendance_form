@@ -7,14 +7,8 @@ body {
   background: url("./../img/hero3.jpg") no-repeat fixed;
   background-size: cover;
   background-position: 0px 0px;
-}
-
-.page-container {
   position: relative;
   min-height: 100vh;
-}
-
-.content {
   padding-bottom: 6rem;
 }
 
@@ -26,7 +20,7 @@ header {
 /* --------------------------------------- Footer Styles */
 footer {
   background-color: #fafafa;
-  position: fixed;
+  position: absolute;
   bottom: 0;
 }
 
@@ -90,7 +84,7 @@ form button {
     font-size: 1.5rem;
   }
 
-  .content {
+  body {
     padding-bottom: 13rem;
   }
 
