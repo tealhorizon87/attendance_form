@@ -43,6 +43,7 @@ function attendingForm(contactForm) {
   var formData = {
     "name": contactForm.name.value,
     "email": contactForm.email.value,
+    "pudding": contactForm.puddingOption.value,
   };
 
   if (contactForm.diet.value == "other") {
